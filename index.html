@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="5;url=https://t.me/MicroPythonOS">
     <title>MicroPythonOS - Community Redirect</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://micropythonos.com/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://micropythonos.com/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://micropythonos.com/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://micropythonos.com/images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://micropythonos.com/images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://micropythonos.com/images/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://micropythonos.com/images/favicon-512x512.png">
+    <!-- End Favicons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -41,9 +50,61 @@
         }
 
         nav .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
+            /* font-family: 'Poppins', sans-serif; */
+            /* font-size: 1.5rem; */
+            /* color: #F8EDE3; */
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        
+        nav .logo img {
+            height: 50px; /* Adjusted for 10-20% bigger */
+            width: auto;
+        }
+        
+        header .logo-header {
+            height: 120px; /* Adjusted for even bigger in header */
+            width: auto;
+            margin-bottom: 15px;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @media (max-width: 768px) {
+            nav .logo img {
+                height: 40px; /* Smaller on mobile */
+                width: 100%;
+            }
+        
+            header .logo-header {
+                height: 80px; /* Smaller on mobile */
+                width: 100%;
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
             color: #F8EDE3;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FF6B6B;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            color: #F8EDE3;
+            font-size: 1.5rem;
         }
 
         /* Header */
@@ -197,16 +258,24 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Menu -->
     <nav>
         <div class="nav-container">
-            <div class="logo">MicroPythonOS</div>
+            <div class="logo"><img src="https://micropythonos.com/images/MicroPythonOS-logo-white(alpha)-long.svg" alt="MicroPythonOS Logo"></div>
+            <ul id="nav-links">
+                <li><a href="https://install.micropythonos.com/" target="_blank" aria-label="Install MicroPythonOS">Install</a></li>
+                <li><a href="https://github.com/MicroPythonOS/MicroPythonOS/releases" target="_blank" aria-label="Download MicroPythonOS">Download</a></li>
+                <li><a href="https://chat.MicroPythonOS.com" target="_blank" aria-label="Community Chat">Community</a></li>
+                <li><a href="https://docs.MicroPythonOS.com" target="_blank" aria-label="Documentation">Documentation</a></li>
+                <li><a href="mailto:info@MicroPythonOS.com" target="_blank" aria-label="Contact MicroPythonOS">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </div>
     </nav>
 
     <!-- Header -->
     <header>
-        <h1>MicroPythonOS</h1>
+        <!-- <h1>MicroPythonOS</h1> -->
+        <img src="https://micropythonos.com/images/MicroPythonOS-logo-white(alpha)-long.svg" alt="MicroPythonOS Logo" class="logo-header">
         <p>Join Our Community!</p>
         <a href="https://t.me/MicroPythonOS" target="_blank" class="cta-button">Visit Our Telegram</a>
     </header>
